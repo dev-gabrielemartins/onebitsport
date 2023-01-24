@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container-all {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* cabeçalho */
+
+.header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #020202e9;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.logo-obc {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+
+.barra-nav {
+  padding: 35px;
+}
+
+.nav-button {
+  font-size: 20px;
+  background-color: transparent;
+  padding: 10px;
+  color: #ccccccff;
+  font-family: 'Nunito', sans-serif;
+  border-color: transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.nav-button:hover{
+  border-bottom-color: #ca0136ff;
+  color: #ca0136ff; 
+}
+
+/* welcome section */
+
+.welcome-title {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  color: #020202e9;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  transition: 0.1s;
+}
+
+.welcome-title:hover {
+  color: #ca0136ff;
+}
+
+.welcome-description {
+  font-size: 20px;
+  text-align: center;
+  padding: 2px;
+  color: #020202e9;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* conteudo principal */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "main-content sidebar-content";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: main-content;
+
+}
+
+.category-sport{
+  width: 280px;
+  height: 280px;
+}
+
+.img-sport {
+  width: 200px;
+  height: 200px;
+  border-radius: 3px;
+  object-fit: cover;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.img-sport:hover{
+  filter:brightness(50%);
+}
+
+.name-sport {
+  max-width: 200px;
+  font-size: 20px;
+  text-align: center;
+  padding: 6px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: 0.1s;
+}
+
+.name-sport:hover {
+  font-weight: bolder;
+}
+
+.about-sport {
+  padding: 6px;
+  text-align: left;
+  width: 200px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* sidebar */
+
+
+.sidebar-content{
+  border-radius: 5px;
+  background-color: #020202e9;
+  color: #ccccccff;
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar-content;
+  align-items: center;
+  padding: 6px;
+  gap: 10px;
+  min-width: 300px;
+}
+
+
+.sidebar-title {
+  font-size: 25px;
+  padding: 8px;
+  transition: 0.1s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar-title:hover{
+  color: #ca0136ff;
+}
+
+.sidebar-category {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.sidebar-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 3px;
+  object-fit: cover;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.sidebar-img:hover {
+  filter:brightness(50%);
+}
+
+.sidebar-name {
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar-name:hover {
+  color: #ca0136ff;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #020202e9;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.develop {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  color: #ccccccff;
+}
+
+.link-topo {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  color: #ccccccff;
+  transition: 0.1s;
+  font-family: 'Nunito', sans-serif;
+}
+
+.link-topo:hover{
+  color: #ca0136ff;
+}
+
+/* responsividade */
+
+@media (max-width: 1200px){
+  .grid-container {
+    grid-template-areas:
+      "main-content"
+      "sidebar-content";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-content {
+    gap: 60px;
+  }
+
+  .sidebar-content {
+    min-width: auto;
+  }
+
+  .link-topo {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    justify-content: center;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+}
